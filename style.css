@@ -1,0 +1,55 @@
+.flex-container {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-header {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-header h1 {
+	font-family: "Indie Flower", cursive;
+	font-size: 5em;
+}
+
+.buttons {
+	padding: 1em;
+}
+
+.buttons button {
+	width: 20em;
+	height: 7em;
+	background-color: #fff;
+}
+
+#rock {
+	margin: 1em;
+}
+
+#paper {
+	margin: 1em;
+}
+
+#scissors {
+	margin: 1em;
+}
+
+.flex-scores {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-scores p {
+	padding: 5em;
+}
+
+.flex-selections {
+	display: flex;
+	justify-content: center;
+}
+
+.flex-winner {
+	display: flex;
+	justify-content: center;
+}
