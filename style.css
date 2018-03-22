@@ -1,6 +1,5 @@
-.flex-container {
-	display: flex;
-	justify-content: center;
+.hide {
+	display: none;
 }
 
 .flex-header {
@@ -13,15 +12,47 @@
 	font-size: 5em;
 }
 
-.buttons {
-	padding: 1em;
+.flex-start {
+	display: flex;
+	justify-content: center;
 }
 
-.buttons button {
+.flex-start button {
+	margin-bottom: 1.5em;
+	font-size: 2em;
+	background-color: #fff;
+	color: #8a8e8b;
+	border-radius: 14px;
+	border: 1px solid transparent
+}
+
+.flex-start button:hover {
+	color: #000;
+	border: 1px solid #ccc;
+	background-color: #8a8e8b;
+}
+
+.flex-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.button-choice button {
 	width: 20em;
 	height: 7em;
 	margin: 1em;
+	font-size: 1.5em;
+	font-weight: bold;
 	background-color: #fff;
+	color: #8a8e8b;
+	border-radius: 14px;
+	border: 1px solid transparent
+}
+
+.button-choice button:hover {
+	color: #000;
+	border: 1px solid #ccc;
+	background-color: #8a8e8b;
 }
 
 .flex-scores {
@@ -30,7 +61,12 @@
 }
 
 .flex-scores p {
-	padding: 5em;
+	padding: 1em;
+	font-size: 2em;
+}
+
+.flex-scores span {
+	font-size: 2em;
 }
 
 .flex-selections {
@@ -39,10 +75,29 @@
 }
 
 .flex-selections p {
-	margin-left: 4em;
+	padding: 1em;
+	font-size: 1.5em;
 }
 
-.flex-winner {
+.game-status {
 	display: flex;
 	justify-content: center;
+}
+
+.game-status p {
+	font-size: 1.5em;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+}
+
+.footer a {
+	color: #787d84;
+	text-decoration: none;
+}
+
+.footer a:hover {
+	color: #000;
 }
