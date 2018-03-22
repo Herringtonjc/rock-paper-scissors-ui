@@ -20,19 +20,8 @@
 .buttons button {
 	width: 20em;
 	height: 7em;
+	margin: 1em;
 	background-color: #fff;
-}
-
-#rock {
-	margin: 1em;
-}
-
-#paper {
-	margin: 1em;
-}
-
-#scissors {
-	margin: 1em;
 }
 
 .flex-scores {
@@ -47,6 +36,10 @@
 .flex-selections {
 	display: flex;
 	justify-content: center;
+}
+
+.flex-selections p {
+	margin-left: 4em;
 }
 
 .flex-winner {
