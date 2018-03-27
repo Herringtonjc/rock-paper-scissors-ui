@@ -51,3 +51,8 @@
 .game-status p {
 	font-size: 1.5em;
 }
+
+.flex-scores span {
+	padding: 1em;
+	font-size: 1.5em;
+}
