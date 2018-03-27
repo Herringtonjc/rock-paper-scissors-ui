@@ -13,8 +13,6 @@ let cScore = parseInt(computerScore.innerHTML);
 const flxButtons = document.getElementById("flex-buttons");
 const flxScores = document.getElementById("flex-scores");
 const flxSelect = document.getElementById("flex-selections");
-const pChoice = document.getElementById("player-choice");
-const cChoice = document.getElementById("computer-choice");
 const gStatus = document.getElementById("status");
 
 btnStart.addEventListener("click", () => game());
@@ -31,8 +29,6 @@ function game() {
   playerScore.innerHTML = pScore;
   cScore = 0;
   computerScore.innerHTML = cScore;
-  pChoice.innerHTML = "";
-  cChoice.innerHTML = "";
 
   if (flxButtons.className === "hide") {
     flxButtons.className = "flex-buttons";
@@ -40,10 +36,6 @@ function game() {
 
   if (flxScores.className === "hide") {
     flxScores.className = "flex-scores";
-  }
-
-  if (flxSelect.className === "hide") {
-    flxSelect.className = "flex-selections";
   }
 }
 
@@ -57,17 +49,11 @@ function gamePlaying() {
     if (flxButtons.className === "flex-buttons") {
       flxButtons.className = "hide";
     }
-    if (flxSelect.className === "flex-selections") {
-      flxSelect.className = "hide";
-    }
     return false;
   } else if (cScore >= winGames) {
     gStatus.innerHTML = "You've lost the game! Press 'Start Game' to play again...";
     if (flxButtons.className === "flex-buttons") {
       flxButtons.className = "hide";
-    }
-    if (flxSelect.className === "flex-selections") {
-      flxSelect.className = "hide";
     }
     return false;
   } else {
@@ -90,42 +76,28 @@ function playRound(humanSelection) {
     if (humanSelection == "rock" && computerSelection == "scissors") {
       pScore++;
       playerScore.innerHTML = pScore;
-      pChoice.innerHTML = "You chose Rock";
-      cChoice.innerHTML = "Computer chose Scissors";
       gStatus.innerHTML = "You win this round!";
     } else if (humanSelection == "rock" && computerSelection == "paper") {
       cScore++;
       computerScore.innerHTML = cScore;
-      pChoice.innerHTML = "You chose Rock";
-      cChoice.innerHTML = "Computer chose Paper";
       gStatus.innerHTML = "You lost this round!";
     } else if (humanSelection == "scissors" && computerSelection == "paper") {
       pScore++;
       playerScore.innerHTML = pScore;
-      pChoice.innerHTML = "You chose Scissors";
-      cChoice.innerHTML = "Computer chose Paper";
       gStatus.innerHTML = "You win this round!";
     } else if (humanSelection == "scissors" && computerSelection == "rock") {
       cScore++;
       computerScore.innerHTML = cScore;
-      pChoice.innerHTML = "You chose Scissors";
-      cChoice.innerHTML = "Computer chose Rock";
       gStatus.innerHTML = "You lost this round!";
     } else if (humanSelection == "paper" && computerSelection == "rock") {
       pScore++;
       playerScore.innerHTML = pScore;
-      pChoice.innerHTML = "You chose Paper";
-      cChoice.innerHTML = "Computer chose Rock";
       gStatus.innerHTML = "You win this round!";
     } else if (humanSelection == "paper" && computerSelection == "scissors") {
       cScore++;
       computerScore.innerHTML = cScore;
-      pChoice.innerHTML = "You chose Paper";
-      cChoice.innerHTML = "Computer chose Scissors";
       gStatus.innerHTML = "You lost this round!";
     } else if (humanSelection == computerSelection) {
-      pChoice.innerHTML = "";
-      cChoice.innerHTML = "";
       gStatus.innerHTML = "You tied!";
     } else {
       //This should never be reached, only used as failsafe
