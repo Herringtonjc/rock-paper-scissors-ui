@@ -1,3 +1,11 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
 .hide {
 	display: none;
 }
@@ -6,17 +14,18 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	height: 100vh;
 }
 
 .flex-header h1 {
 	font-family: "Indie Flower", cursive;
-	font-size: 4em;
+	font-weight: bold;
+	font-size: 65px;
 }
 
 .flex-start button {
-	margin-bottom: 1.5em;
-	font-size: 2em;
+	margin: 20px;
+	font-size: 30px;
 	background-color: #fff;
 	color: #8a8e8b;
 	border-radius: 14px;
@@ -29,16 +38,20 @@
 	background-color: #8a8e8b;
 }
 
+.button-choice {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .button-choice button {
-	height: 2em;
-	width: 5em;
-	margin: 1em;
-	font-size: 2em;
+	padding: 10px;
+	font-size: 30px;
 	font-weight: bold;
 	background-color: #fff;
 	color: #8a8e8b;
 	border-radius: 14px;
-	border: 1px solid transparent
+	border: 1px solid transparent;
+	flex-grow: 1;
 }
 
 .button-choice button:hover {
@@ -48,10 +61,14 @@
 }
 
 .game-status p {
-	font-size: 1.5em;
+	font-size: 25px;
 }
 
-.flex-scores span {
-	padding: 1em;
-	font-size: 1.5em;
+.flex-scores {
+	padding: 15px;
+	font-size: 35px;
+}
+
+@media screen and (max-width: 500px) {
+
 }

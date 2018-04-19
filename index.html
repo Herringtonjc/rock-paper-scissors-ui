@@ -7,20 +7,24 @@
 	<title>Rock, Paper, Scissors</title>
 	<link rel="icon" href="./images/icon.png" />
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="./reset.css">
 	<link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
 	<div class="flex-container">
-		<div class="flex-header">
-			<h1>Rock, Paper, Scissors</h1><span id="player-score">0</span>
-		</div>
-		
+
+		<header class="flex-header">
+			<h1>Rock, Paper, Scissors</h1>
+		</header>
+
 		<div class="flex-start">
 			<button id="start">Start Game</button>
 		</div>
+
 		<div class="game-status">
 			<p id="status">Press 'Start Game' to start, winner is first to 5!</p>
 		</div>
+
 		<div class="hide" id="flex-buttons">
 			<div class="button-choice">
 				<button id="rock">Rock</button>
@@ -28,10 +32,12 @@
 				<button id="scissors">Scissors</button>
 			</div>
 		</div>
+
 		<div class="hide" id="flex-scores">
 			Player Score: <span id="player-score">0</span>
 			Computer Score: <span id="computer-score">0</span>
 		</div>
+
 	</div>
 <script src="script.js"></script>
 </body>
