@@ -7,8 +7,8 @@ const btnScissors = document.getElementById("scissors");
 
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
-let pScore = parseInt(playerScore.innerHTML);
-let cScore = parseInt(computerScore.innerHTML);
+let pScore = parseInt(playerScore.textContent);
+let cScore = parseInt(computerScore.textContent);
 
 const flxButtons = document.getElementById("flex-buttons");
 const flxScores = document.getElementById("flex-scores");
@@ -24,11 +24,11 @@ function game() {
   /*Clear all scores
     Clear all choices
     Show game components*/
-  gStatus.innerHTML = "New Game Started!";
+  gStatus.textContent = "New Game Started!";
   pScore = 0;
-  playerScore.innerHTML = pScore;
+  playerScore.textContent = pScore;
   cScore = 0;
-  computerScore.innerHTML = cScore;
+  computerScore.textContent = cScore;
 
   if (flxButtons.className === "hide") {
     flxButtons.className = "flex-buttons";
@@ -44,14 +44,14 @@ function gamePlaying() {
     to determine if a player has reached
     the maximum score*/
   if (pScore >= winGames) {
-    gStatus.innerHTML = "You've won the game! Press 'Start Game' to play again...";
+    gStatus.textContent = "You've won the game! Press 'Start Game' to play again...";
 
     if (flxButtons.className === "flex-buttons") {
       flxButtons.className = "hide";
     }
     return false;
   } else if (cScore >= winGames) {
-    gStatus.innerHTML = "You've lost the game! Press 'Start Game' to play again...";
+    gStatus.textContent = "You've lost the game! Press 'Start Game' to play again...";
     if (flxButtons.className === "flex-buttons") {
       flxButtons.className = "hide";
     }
@@ -75,30 +75,30 @@ function playRound(humanSelection) {
 
     if (humanSelection == "rock" && computerSelection == "scissors") {
       pScore++;
-      playerScore.innerHTML = pScore;
-      gStatus.innerHTML = "You win this round!";
+      playerScore.textContent = pScore;
+      gStatus.textContent = "You win this round!";
     } else if (humanSelection == "rock" && computerSelection == "paper") {
       cScore++;
-      computerScore.innerHTML = cScore;
-      gStatus.innerHTML = "You lost this round!";
+      computerScore.textContent = cScore;
+      gStatus.textContent = "You lost this round!";
     } else if (humanSelection == "scissors" && computerSelection == "paper") {
       pScore++;
-      playerScore.innerHTML = pScore;
-      gStatus.innerHTML = "You win this round!";
+      playerScore.textContent = pScore;
+      gStatus.textContent = "You win this round!";
     } else if (humanSelection == "scissors" && computerSelection == "rock") {
       cScore++;
-      computerScore.innerHTML = cScore;
-      gStatus.innerHTML = "You lost this round!";
+      computerScore.textContent = cScore;
+      gStatus.textContent = "You lost this round!";
     } else if (humanSelection == "paper" && computerSelection == "rock") {
       pScore++;
-      playerScore.innerHTML = pScore;
-      gStatus.innerHTML = "You win this round!";
+      playerScore.textContent = pScore;
+      gStatus.textContent = "You win this round!";
     } else if (humanSelection == "paper" && computerSelection == "scissors") {
       cScore++;
-      computerScore.innerHTML = cScore;
-      gStatus.innerHTML = "You lost this round!";
+      computerScore.textContent = cScore;
+      gStatus.textContent = "You lost this round!";
     } else if (humanSelection == computerSelection) {
-      gStatus.innerHTML = "You tied!";
+      gStatus.textContent = "You tied!";
     } else {
       //This should never be reached, only used as failsafe
       console.log("ERROR: A valid selection was not made.");
