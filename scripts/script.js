@@ -68,11 +68,35 @@ function computerPlay() {
   return choices[computerChoice];
 }
 
+function updateComputerImage(computerSelection) {
+  //Display the computers choice using an image
+  let imageDiv = getElementByClassName("computer-choice-image");
+  switch(computerSelection) {
+    case "rock":
+      let rockImage = new Image();
+      rockImage.src = "images/rock.png";
+      imageDiv.appendChild(rockImage);
+      break;
+    case "scissors":
+      let scissorsImage = new Image();
+      scissorsImage.src = "images/scissors.png";
+      imageDiv.appendChild(scissorsImage);
+      break;
+    case "paper":
+      let paperImage = new Image();
+      paperImage.src = "images/paper.png";
+      imageDiv.appendChild(paperImage);
+      break;
+    default:
+      return;
+  }
+}
+
 function playRound(humanSelection) {
   //Compare the humanSelection to the computerSelection
   if (gamePlaying()) {
     let computerSelection = computerPlay();
-
+    
     if (humanSelection == "rock" && computerSelection == "scissors") {
       pScore++;
       playerScore.textContent = pScore;
