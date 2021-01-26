@@ -29,14 +29,13 @@ html {
 	font-size: 60px;
 }
 
-#start {
+.flex-start button {
 	margin: 20px;
 	font-size: 30px;
 	background-color: #fff;
 	color: #8a8e8b;
 	border-radius: 14px;
 	border: 1px solid transparent;
-	text-align: center;
 }
 
 .flex-start button:hover {
