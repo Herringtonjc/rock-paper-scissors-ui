@@ -29,13 +29,14 @@ html {
 	font-size: 60px;
 }
 
-.flex-start button {
+#start {
 	margin: 20px;
 	font-size: 30px;
 	background-color: #fff;
 	color: #8a8e8b;
 	border-radius: 14px;
 	border: 1px solid transparent;
+	text-align: center;
 }
 
 .flex-start button:hover {
@@ -82,8 +83,20 @@ html {
 	margin: 10px;
 }
 
+p.choice {
+	font-size: 2.5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: center;
+}
+
+#grid-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
 @media screen and (max-width: 500px) {
-	.flex-header h1, .flex-scores  {
+	.flex-header h1, .flex-scores {
 		font-size: 25px;
 	}
 }
