@@ -15,7 +15,6 @@
 		<header class="flex-header">
 			<h1>Rock, Paper, Scissors</h1>
 		</header>
-
 		<div class="flex-start">
 			<button id="start">Start Game</button>
 		</div>
@@ -36,7 +35,15 @@
 			<p>Player Score: <span id="player-score">0</span><p>
 			<p>Computer Score: <span id="computer-score">0</span><p>
 		</div>
-		<div class="computer-choice-image">
+		<div id="grid-wrapper">
+			<div id="player-choice-div">
+				<p class="choice">You chose:</p>
+				<img src="" id="player-choice-image">
+			</div>
+			<div id="computer-choice-div">
+				<p class="choice">Computer chose:</p>
+				<img src="" id="computer-choice-image">
+			</div>
 		</div>
 	</div>
 <script src="scripts/script.js"></script>
