@@ -1,0 +1,89 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+.hide {
+	display: none;
+}
+
+.flex-container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+.flex-header {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-header h1 {
+	font-family: "Indie Flower", cursive;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+.flex-start button {
+	margin: 20px;
+	font-size: 30px;
+	background-color: #fff;
+	color: #8a8e8b;
+	border-radius: 14px;
+	border: 1px solid transparent;
+}
+
+.flex-start button:hover {
+	color: #000;
+	border: 1px solid #ccc;
+	background-color: #8a8e8b;
+}
+
+.button-choice {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.button-choice button {
+	padding: 10px;
+	font-size: 30px;
+	font-weight: bold;
+	background-color: #fff;
+	color: #8a8e8b;
+	border-radius: 14px;
+	border: 1px solid transparent;
+	flex-grow: 1;
+}
+
+.button-choice button:hover {
+	color: #000;
+	border: 1px solid #ccc;
+	background-color: #8a8e8b;
+}
+
+.game-status p {
+	font-size: 25px;
+}
+
+.flex-scores {
+	display: flex;
+	align-content: space-between;
+	flex-wrap: wrap;
+	padding: 15px;
+	font-size: 35px;
+}
+
+.flex-scores p {
+	margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+	.flex-header h1, .flex-scores  {
+		font-size: 25px;
+	}
+}
